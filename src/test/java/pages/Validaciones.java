@@ -1,6 +1,7 @@
 package pages;
 
 
+import Utils.ConfigFileReader;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,13 @@ import Utils.AndroidUtils;
 import java.util.concurrent.TimeUnit;
 
 public class Validaciones {
+
+    private String Titulo = ConfigFileReader.getData("titulo");
+    private String Nombre = ConfigFileReader.getData("nombre");
+    private String Apellido = ConfigFileReader.getData("apellido");
+
+
+
     AppiumDriver driver = null;
     AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
     AndroidUtils androidUtils;
@@ -57,5 +65,10 @@ public class Validaciones {
     public void Formulario1(){
         WebElement formulario1 = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.widget.ImageView"));
         formulario1.click();
+    }
+    public void Titulo(){
+     WebElement titulo = driver.findElement(By.id("com.heartfull.forms:id/edt_form_compose_title"));
+     titulo.click();
+     titulo.sendKeys(Titulo);
     }
 }

@@ -27,5 +27,20 @@ public class ConfigFileReader {
         }
         return reportConfigPath;
     }
+    public static String getData(String propertyName) {
+        String reportConfigPath = "";
+        try (InputStream input = new FileInputStream("src/test/resources/Data.yml")) {
+
+            Properties prop = new Properties();
+
+            // load a properties file
+            prop.load(input);
+            reportConfigPath = prop.getProperty(propertyName);
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return reportConfigPath;
+    }
 
 }

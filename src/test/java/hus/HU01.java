@@ -16,6 +16,7 @@ Login.Ingreso();
     @And("Seleccionar el tipo de Formulario a Diligenciar")
     public void seleccionar_el_tipo_de_formulario_a_diligenciar() {
 Login.Formulario1();
+Login.Titulo();
     }
     @Then("Validar el ingreso al aplicativo")
     public void validar_el_ingreso_al_aplicativo() {
