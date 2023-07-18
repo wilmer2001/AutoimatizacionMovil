@@ -4,11 +4,13 @@ package runner;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "hus",
-        tags = "@SmokeTest",
+       // tags = "@SmokeTest",
         plugin = {
                 //"pretty",
                 //"html:target/cucumber-reports/cucumber-pretty.html",
@@ -17,4 +19,5 @@ import org.junit.runner.RunWith;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         })
 public class RunCucumber {
+
 }

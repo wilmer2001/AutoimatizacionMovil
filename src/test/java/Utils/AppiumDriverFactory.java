@@ -52,5 +52,9 @@ public class AppiumDriverFactory {
     public AppiumDriver<AndroidElement> getDriver() {
 
         return driver;
+
+
     }
+
+
 }

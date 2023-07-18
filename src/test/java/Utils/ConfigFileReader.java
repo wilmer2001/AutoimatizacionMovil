@@ -27,9 +27,9 @@ public class ConfigFileReader {
         }
         return reportConfigPath;
     }
-    public static String getData(String propertyName) {
+ /*   public static String getData(String propertyName) {
         String reportConfigPath = "";
-        try (InputStream input = new FileInputStream("src/test/resources/Data.yml")) {
+        try (InputStream input = new FileInputStream("src/test/resources/Data.properties")) {
 
             Properties prop = new Properties();
 
@@ -41,6 +41,6 @@ public class ConfigFileReader {
             ex.printStackTrace();
         }
         return reportConfigPath;
-    }
+    }*/
 
 }
